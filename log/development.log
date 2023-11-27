@@ -1,0 +1,472 @@
+  [1m[35m (169.2ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (166.4ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-11-26 17:25:12.182906', '2023-11-26 17:25:12.182908') RETURNING "key"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.65.1 at 2023-11-26 17:26:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 374)
+Completed 200 OK in 23ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 7744)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.65.1 at 2023-11-26 20:25:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 374)
+Completed 200 OK in 24ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 7744)
+
+
+Started GET "/graphqliq" for 192.168.65.1 at 2023-11-26 20:26:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/graphqliq"):
+  
+Started GET "/favicon.ico" for 192.168.65.1 at 2023-11-26 20:26:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/graphiql" for 192.168.65.1 at 2023-11-26 20:26:20 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/graphiql"):
+  
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.65.1 at 2023-11-26 21:22:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 374)
+Completed 200 OK in 28ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 7736)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateStudents (20231127021225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "birthdate" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231127021225') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (2.1ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "birthdate", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "clayton"], ["last_name", "johnson"], ["birthdate", nil], ["created_at", "2023-11-27 02:20:02.011703"], ["updated_at", "2023-11-27 02:20:02.011703"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Update (1.9ms)[0m  [1m[33mUPDATE "students" SET "birthdate" = $1, "updated_at" = $2 WHERE "students"."id" = $3[0m  [["birthdate", "2018-04-16"], ["updated_at", "2023-11-27 02:22:55.464394"], ["id", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 02:27:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  "}}
+Completed   in 67ms (ActiveRecord: 0.0ms | Allocations: 83759)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.65.1 at 2023-11-27 02:29:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 374)
+Completed 200 OK in 24ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 7741)
+
+
+Started GET "/graphql" for 192.168.65.1 at 2023-11-27 02:29:40 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/graphql"):
+  
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 02:29:52 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n    first_name\n    last_name\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n    first_name\n    last_name\n  }\n}"}}
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4684)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 02:30:51 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n  }\n}"}}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Completed 200 OK in 67ms (Views: 0.2ms | ActiveRecord: 8.2ms | Allocations: 26348)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 02:30:57 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 2) {\n    id\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 2) {\n    id\n  }\n}"}}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Couldn't find Student with 'id'=2
+/usr/local/bundle/gems/activerecord-7.1.2/lib/active_record/core.rb:253:in `find'
+/usr/src/app/app/graphql/types/query_type.rb:26:in `student'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:698:in `public_send'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:698:in `block (2 levels) in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:832:in `with_extensions'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:669:in `block in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:770:in `minimal_after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/query.rb:374:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:667:in `resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:358:in `block (2 levels) in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/tracing/trace.rb:51:in `execute_field'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:357:in `block in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:709:in `call_method_on_directives'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:354:in `evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:331:in `block in evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:830:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:279:in `evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:273:in `block in evaluate_selection'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/arguments_cache.rb:51:in `block in dataload_for'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/member/has_arguments.rb:300:in `block (3 levels) in coerce_arguments'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:216:in `block in run'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:334:in `block in spawn_fiber'
+Completed 500 Internal Server Error in 7ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1054)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 02:31:04 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n  }\n}"}}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 935)
+
+
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:34:35 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n  }\n}"}}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Completed 200 OK in 33ms (Views: 0.9ms | ActiveRecord: 4.7ms | Allocations: 3756)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:34:40 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 2) {\n    id\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 2) {\n    id\n  }\n}"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Couldn't find Student with 'id'=2
+/usr/local/bundle/gems/activerecord-7.1.2/lib/active_record/core.rb:253:in `find'
+/usr/src/app/app/graphql/types/query_type.rb:26:in `student'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:698:in `public_send'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:698:in `block (2 levels) in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:832:in `with_extensions'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:669:in `block in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:770:in `minimal_after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/query.rb:374:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:667:in `resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:358:in `block (2 levels) in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/tracing/trace.rb:51:in `execute_field'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:357:in `block in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:709:in `call_method_on_directives'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:354:in `evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:331:in `block in evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:830:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:279:in `evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:273:in `block in evaluate_selection'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/arguments_cache.rb:51:in `block in dataload_for'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/member/has_arguments.rb:300:in `block (3 levels) in coerce_arguments'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:216:in `block in run'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:334:in `block in spawn_fiber'
+Completed 500 Internal Server Error in 7ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 981)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:34:48 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n  }\n}"}}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 924)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:34:54 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n    first_name\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n    first_name\n  }\n}"}}
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 886)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:35:40 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n    firstName\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n    firstName\n  }\n}"}}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 964)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:35:54 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1024)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:37:00 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:37:29 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  student {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 530)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:37:40 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student(id: 1) {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  student(id: 1) {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/graphql/types/query_type.rb:26:in `student'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 998)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:38:04 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  student {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 512)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:38:38 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2864)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:38:56 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  student {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  student {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:43:24 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 6924)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:53:56 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+              Failed to implement Query.students, tried:
+
+              - `Types::QueryType#students`, which did not exist
+              - `NilClass#students`, which did not exist
+              - Looking up hash key `:students` or `"students"` on ``, but it wasn't a Hash
+
+              To implement this field, define one of the methods above (and check for typos), or supply a `fallback_value`.
+
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:725:in `block (2 levels) in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:843:in `block in with_extensions'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:879:in `block (2 levels) in run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:882:in `run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:879:in `block in run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field_extension.rb:134:in `resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:866:in `run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:838:in `with_extensions'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:669:in `block in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:770:in `minimal_after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/query.rb:374:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:667:in `resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:358:in `block (2 levels) in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/tracing/trace.rb:51:in `execute_field'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:357:in `block in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:709:in `call_method_on_directives'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:354:in `evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:264:in `evaluate_selection'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:214:in `block (2 levels) in evaluate_selections'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:216:in `block in run'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:334:in `block in spawn_fiber'
+Completed 500 Internal Server Error in 13ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2698)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:56:11 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+uninitialized constant Types::BaseEdge
+/usr/src/app/app/graphql/types/base_object.rb:5:in `<class:BaseObject>'
+/usr/src/app/app/graphql/types/base_object.rb:4:in `<module:Types>'
+/usr/src/app/app/graphql/types/base_object.rb:3:in `<main>'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/local/bundle/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/local/bundle/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/usr/src/app/app/graphql/types/base_edge.rb:4:in `<module:Types>'
+/usr/src/app/app/graphql/types/base_edge.rb:3:in `<main>'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/local/bundle/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/local/bundle/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/usr/src/app/app/graphql/types/base_interface.rb:6:in `<module:BaseInterface>'
+/usr/src/app/app/graphql/types/base_interface.rb:4:in `<module:Types>'
+/usr/src/app/app/graphql/types/base_interface.rb:3:in `<main>'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/local/bundle/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/local/bundle/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/usr/src/app/app/graphql/types/node_type.rb:5:in `<module:NodeType>'
+/usr/src/app/app/graphql/types/node_type.rb:4:in `<module:Types>'
+/usr/src/app/app/graphql/types/node_type.rb:3:in `<main>'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/local/bundle/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/local/bundle/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/usr/src/app/app/graphql/types/query_type.rb:5:in `<class:QueryType>'
+/usr/src/app/app/graphql/types/query_type.rb:4:in `<module:Types>'
+/usr/src/app/app/graphql/types/query_type.rb:3:in `<main>'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/local/bundle/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/local/bundle/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/usr/src/app/app/graphql/graphql_jsonapi_comparison_schema.rb:4:in `<class:GraphqlJsonapiComparisonSchema>'
+/usr/src/app/app/graphql/graphql_jsonapi_comparison_schema.rb:3:in `<main>'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+/usr/local/bundle/gems/bootsnap-1.17.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/usr/local/bundle/gems/zeitwerk-2.6.12/lib/zeitwerk/kernel.rb:30:in `require'
+/usr/src/app/app/controllers/graphql_controller.rb:17:in `execute'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/abstract_controller/base.rb:224:in `process_action'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/rendering.rb:165:in `process_action'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/abstract_controller/callbacks.rb:258:in `process_action'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/rescue.rb:25:in `process_action'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/notifications.rb:206:in `block in instrument'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/notifications.rb:206:in `instrument'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+/usr/local/bundle/gems/activerecord-7.1.2/lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/abstract_controller/base.rb:160:in `process'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal.rb:227:in `dispatch'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal.rb:309:in `dispatch'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:51:in `block in serve'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:124:in `each'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:124:in `find_routes'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/routing/route_set.rb:882:in `call'
+/usr/local/bundle/gems/rack-3.0.8/lib/rack/etag.rb:29:in `call'
+/usr/local/bundle/gems/rack-3.0.8/lib/rack/conditional_get.rb:43:in `call'
+/usr/local/bundle/gems/rack-3.0.8/lib/rack/head.rb:15:in `call'
+/usr/local/bundle/gems/activerecord-7.1.2/lib/active_record/migration.rb:654:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/usr/local/bundle/gems/railties-7.1.2/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/local/bundle/gems/railties-7.1.2/lib/rails/rack/logger.rb:24:in `block in call'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:135:in `block in tagged'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:39:in `tagged'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/tagged_logging.rb:135:in `tagged'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/broadcast_logger.rb:240:in `method_missing'
+/usr/local/bundle/gems/railties-7.1.2/lib/rails/rack/logger.rb:24:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/request_id.rb:28:in `call'
+/usr/local/bundle/gems/rack-3.0.8/lib/rack/runtime.rb:24:in `call'
+/usr/local/bundle/gems/activesupport-7.1.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/static.rb:25:in `call'
+/usr/local/bundle/gems/rack-3.0.8/lib/rack/sendfile.rb:114:in `call'
+/usr/local/bundle/gems/actionpack-7.1.2/lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+/usr/local/bundle/gems/railties-7.1.2/lib/rails/engine.rb:529:in `call'
+/usr/local/bundle/gems/puma-6.4.0/lib/puma/configuration.rb:272:in `call'
+/usr/local/bundle/gems/puma-6.4.0/lib/puma/request.rb:100:in `block in handle_request'
+/usr/local/bundle/gems/puma-6.4.0/lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+/usr/local/bundle/gems/puma-6.4.0/lib/puma/request.rb:99:in `handle_request'
+/usr/local/bundle/gems/puma-6.4.0/lib/puma/server.rb:443:in `process_client'
+/usr/local/bundle/gems/puma-6.4.0/lib/puma/server.rb:241:in `block in run'
+/usr/local/bundle/gems/puma-6.4.0/lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Completed 500 Internal Server Error in 9ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1472)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:56:29 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+              Failed to implement Query.students, tried:
+
+              - `Types::QueryType#students`, which did not exist
+              - `NilClass#students`, which did not exist
+              - Looking up hash key `:students` or `"students"` on ``, but it wasn't a Hash
+
+              To implement this field, define one of the methods above (and check for typos), or supply a `fallback_value`.
+
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:725:in `block (2 levels) in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:843:in `block in with_extensions'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:879:in `block (2 levels) in run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:882:in `run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:879:in `block in run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field_extension.rb:134:in `resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:866:in `run_extensions_before_resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:838:in `with_extensions'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:669:in `block in resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:770:in `minimal_after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/query.rb:374:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/schema/field.rb:667:in `resolve'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:358:in `block (2 levels) in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/tracing/trace.rb:51:in `execute_field'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:357:in `block in evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:709:in `call_method_on_directives'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:354:in `evaluate_selection_with_resolved_keyword_args'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:264:in `evaluate_selection'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/execution/interpreter/runtime.rb:214:in `block (2 levels) in evaluate_selections'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:216:in `block in run'
+/usr/local/bundle/gems/graphql-2.1.6/lib/graphql/dataloader.rb:334:in `block in spawn_fiber'
+Completed 500 Internal Server Error in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1801)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-11-27 03:56:55 +0000
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}", "graphql"=>{"query"=>"{\n  students {\n    id\n    firstName\n    lastName\n    birthdate\n  }\n}"}}
+  [1m[36mStudent Load (15.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 20.5ms | Allocations: 8219)
+
+

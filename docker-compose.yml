@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - postgres
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    ports:
+      - "4000:3000"
+
+  # This is odd - but all I do is build the frontend with this step
+  # It won't hot reload
+#  frontend:
+#    image: node:16
+#    working_dir: /myapp/frontend
+#    command: script/build
+#    volumes:
+#      - .:/myapp
+
+  postgres:
+    image: postgres:14
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - "5432:5432"
