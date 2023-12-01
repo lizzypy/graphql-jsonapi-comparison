@@ -13,14 +13,12 @@ services:
     ports:
       - "4000:3000"
 
-  # This is odd - but all I do is build the frontend with this step
-  # It won't hot reload
-#  frontend:
-#    image: node:16
-#    working_dir: /myapp/frontend
-#    command: script/build
-#    volumes:
-#      - .:/myapp
+  frontend:
+    image: node:20
+    working_dir: /usr/src/app/frontend
+    command: npm install && npm run build
+    volumes:
+      - .:/usr/src/app
 
   postgres:
     image: postgres:14
