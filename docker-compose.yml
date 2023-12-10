@@ -11,14 +11,14 @@ services:
       - POSTGRES_USER=${DATABASE_USER}
       - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
     ports:
-      - "4000:3000"
+      - "3000:3000"
 
-  frontend:
-    image: node:20
-    working_dir: /usr/src/app/frontend
-    command: npm install && npm run build
-    volumes:
-      - .:/usr/src/app
+#  frontend:
+#    image: node:20
+#    working_dir: /usr/src/app/frontend
+#    command: npm install && npm run build
+#    volumes:
+#      - .:/usr/src/app
 
   postgres:
     image: postgres:14
