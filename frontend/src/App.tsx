@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import JsonBox from "./components/JsonBox";
-import RequestButton from "./components/RequestButton";
+import ActionButton from "./components/ActionButton";
 import {Box} from "@mui/material";
 import {makeStyles} from "@mui/styles";
 import getGraphQLResource from "./api/getGraphQLResource";
+import MyCodeBlock from "./components/MyCodeBlock";
 
 const useStyles = makeStyles((theme) => ({
     flexContainer: {
@@ -21,9 +21,19 @@ function App() {
     const [records, setRecords] = useState({})
     const [getRecords, setGetRecords] = useState(false)
 
+    const studentsRequest = ` query {
+            students {
+                id
+                firstName
+                lastName
+                birthdate 
+            }
+          }
+        `;
+
     useEffect(() => {
         const fetch = async () => {
-            const response = await getGraphQLResource('students')
+            const response = await getGraphQLResource(studentsRequest)
             setRecords(response);
             setGetRecords(false)
         }
@@ -35,29 +45,19 @@ function App() {
         setGetRecords(true);
     }
 
-    const studentsRequest = ` 
-        query {
-            students {
-              id
-              firstName
-              lastName
-              birthdate 
-            }
-          }
-        `;
-
     return (
         <div className="App">
             <header className="App-header">
                 <div className={classes.flexContainer}>
                     <Box>
                         <p>Students Request</p>
-                        <RequestButton onClick={onClick} />
-                        <JsonBox query={studentsRequest}/>
+                        <ActionButton onClick={onClick} title={'Request'} />
+                        <MyCodeBlock code={studentsRequest} language={'graphql'} showLineNumbers={true}/>
                     </Box>
                     <Box>
                         <p>Students Response</p>
-                        <JsonBox query={""}/>
+                        <ActionButton onClick={()=> { return } } title={'Clear'} />
+                        <MyCodeBlock code={JSON.stringify(records)} language={'json'} showLineNumbers={true}/>
                     </Box>
                 </div>
             </header>

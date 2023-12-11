@@ -556,3 +556,186 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3690)
 
 
+  [1m[35m (202.2ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (193.5ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-12-11 14:21:22.860297', '2023-12-11 14:21:22.860300') RETURNING "key"[0m
+Migrating to CreateStudents (20231127021225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "birthdate" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231127021225') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/students" for 192.168.65.1 at 2023-12-11 14:22:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/students"):
+  
+Started POST "/students" for 192.168.65.1 at 2023-12-11 14:22:36 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/students"):
+  
+Started POST "/students" for 192.168.65.1 at 2023-12-11 14:22:46 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/students"):
+  
+Started POST "/students" for 192.168.65.1 at 2023-12-11 14:22:46 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/students"):
+  
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:24:48 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {"students"=>nil}
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2128)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:24:50 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {"students"=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:24:50 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {"students"=>nil}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:26:58 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:27:03 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:27:03 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:35:04 +0000
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:35:04 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Processing by GraphqlController#execute as HTML
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:43:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5596)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:43:18 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:43:42 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 196)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:43:42 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:44:46 +0000
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:44:46 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 196)
+
+
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 196)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:44:51 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 196)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:44:51 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:45:12 +0000
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:45:12 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:45:14 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:45:14 +0000
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "web_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "web_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:46:35 +0000
+Started POST "/graphql" for 192.168.65.1 at 2023-12-11 14:46:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphqlController#execute as HTML
+Processing by GraphqlController#execute as HTML
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+  Parameters: {" query {\n            students {\n                id\n                firstName\n                lastName\n                birthdate \n            }\n          }\n        "=>nil}
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 5630)
+
+
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 5728)
+
+
