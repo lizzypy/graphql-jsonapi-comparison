@@ -3,7 +3,7 @@ import './App.css';
 import ActionButton from "./components/ActionButton";
 import {Box} from "@mui/material";
 import {makeStyles} from "@mui/styles";
-import getGraphQLResource from "./api/getGraphQLResource";
+import {gql, useApolloClient, useQuery} from '@apollo/client';
 import MyCodeBlock from "./components/MyCodeBlock";
 
 const useStyles = makeStyles((theme) => ({
@@ -18,10 +18,11 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
     const classes = useStyles();
-    const [records, setRecords] = useState({})
-    const [getRecords, setGetRecords] = useState(false)
+    const [getRecords, setGetRecords] = useState(false);
+    const [records, setRecords] = useState({data: {}});
+    const client = useApolloClient();
 
-    const studentsRequest = ` query {
+    const studentsRequest = `query GetStudents {
             students {
                 id
                 firstName
@@ -30,19 +31,21 @@ function App() {
             }
           }
         `;
+    const GET_STUDENTS = gql`${studentsRequest}`;
 
     useEffect(() => {
         const fetch = async () => {
-            const response = await getGraphQLResource(studentsRequest)
+            const response = await client.query( { query:GET_STUDENTS })
             setRecords(response);
             setGetRecords(false)
         }
         fetch();
-
-    }, [getRecords])
+    }, [getRecords]);
+    // const { loading, error, data } = useQuery(GET_STUDENTS);
 
     const onClick = async () => {
         setGetRecords(true);
+        return
     }
 
     return (
@@ -56,8 +59,8 @@ function App() {
                     </Box>
                     <Box>
                         <p>Students Response</p>
-                        <ActionButton onClick={()=> { return } } title={'Clear'} />
-                        <MyCodeBlock code={JSON.stringify(records)} language={'json'} showLineNumbers={true}/>
+                        <ActionButton onClick={()=> { setRecords({data: {}}); return } } title={'Clear'} />
+                        <MyCodeBlock code={JSON.stringify(records.data, null, 2)} language={'json'} showLineNumbers={true}/>
                     </Box>
                 </div>
             </header>
