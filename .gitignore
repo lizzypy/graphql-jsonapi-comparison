@@ -1,3 +1,8 @@
 data
 tmp
 public
+
+node_modules
+
+*.swp
+*.swo
