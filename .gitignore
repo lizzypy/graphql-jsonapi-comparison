@@ -1,3 +1,11 @@
+# data and builds
 data
 tmp
 public
+log
+
+# don't commit js libraries
+**/node_modules
+
+# local variables
+.env.local
