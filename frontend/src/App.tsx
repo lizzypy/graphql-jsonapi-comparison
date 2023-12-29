@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import StudentsRequest from "./components/graphql/StudentsRequest";
-import { FormControl, InputLabel, MenuItem, Select} from "@mui/material";
+import { FormControl, MenuItem, Select} from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import JSONStudentsRequest from "./components/jsonapi/JSONStudentsRequest";
 
 
 const theme = createTheme({
@@ -13,14 +14,20 @@ const theme = createTheme({
 });
 
 function App() {
+    const selectStyle = {
+        border: '2px solid #FFFFFF', // White border
+        color: '#FFFFFF', // White text color
+        height: '50px',
+        paddingTop: '10px',
+    };
     const [specificationSelection, setSpecificationSelection] = useState('graphql')
     return (
         <ThemeProvider theme={theme}>
-            <div style={{display: "flex", flexDirection: "row", paddingTop: "100px", justifyContent: "center"}}>
+            <div style={{display: "flex", flexDirection: "row", paddingTop: "100px", paddingLeft: "300px", justifyContent: "left"}}>
                 <div style={{ fontFamily: "Montserrat", fontSize: "32px", fontWeight: "bold", paddingRight: "10px" }}>Selected Specification:</div>
                 <FormControl style={{ width: '300px' }}>
-                    <InputLabel id="select-label">Select Spec</InputLabel>
                     <Select
+                        style={selectStyle}
                         labelId="select-label"
                         id="select"
                         value={specificationSelection}
@@ -32,7 +39,7 @@ function App() {
                     </Select>
                 </FormControl>
             </div>
-            {specificationSelection === 'graphql' ? <StudentsRequest/> : <div>COMING SOON!</div>}
+            {specificationSelection === 'graphql' ? <StudentsRequest/> : <JSONStudentsRequest/>}
         </ThemeProvider>
     )
 }
