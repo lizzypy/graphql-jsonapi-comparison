@@ -8,7 +8,7 @@ interface CodeBlockProps {
 
 function MyCodeBlock({ code, language, showLineNumbers }: CodeBlockProps) {
     return (
-        <div style={{ minWidth: "400px", fontSize: "20px", flexWrap: "wrap", maxWidth: "400px" }}>
+        <div style={{ minWidth: "600px", fontSize: "20px", flexWrap: "wrap", maxWidth: "400px" }}>
         <CodeBlock
             text={code}
             language={language}

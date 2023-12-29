@@ -8,7 +8,9 @@ interface requestButtonProps {
 
 const ActionButton = ({ onClick, title }: requestButtonProps ) => {
     return (
-        <Button onClick={onClick}>{title}</Button>
+        <div style={{ paddingBottom: "20px" }}>
+            <Button color="primary" style={{ color: '#FFFFFF' }} onClick={onClick}>{title}</Button>
+        </div>
     )
 }
 
