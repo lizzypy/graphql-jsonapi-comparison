@@ -54,10 +54,19 @@ const JSONStudentsRequest = () => {
                     fontFamily: "Montserrat",
                     fontSize: "32px",
                     fontWeight: "bold",
-                    color: "#FFFFFF"
+                    color: "white"
                 }}>Students Request</p>
                 <ActionButton onClick={onClick} title={'Request'}/>
-                <TextField value={studentsRequest}/>
+                <TextField
+                    style={{minWidth: "500px"}}
+                    InputProps={{
+                        style: {
+                            color: 'white',
+                            border: '2px solid #FFFFFF',
+                        },
+                    }}
+                    value={studentsRequest}
+                />
             </Box>
             <Box>
                 <p style={{

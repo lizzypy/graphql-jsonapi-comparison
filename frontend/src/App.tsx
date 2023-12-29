@@ -23,7 +23,7 @@ function App() {
     const [specificationSelection, setSpecificationSelection] = useState('graphql')
     return (
         <ThemeProvider theme={theme}>
-            <div style={{display: "flex", flexDirection: "row", paddingTop: "100px", paddingLeft: "300px", justifyContent: "left"}}>
+            <div style={{display: "flex", flexDirection: "row", paddingTop: "100px", paddingLeft: "200px", justifyContent: "left"}}>
                 <div style={{ fontFamily: "Montserrat", fontSize: "32px", fontWeight: "bold", paddingRight: "10px" }}>Selected Specification:</div>
                 <FormControl style={{ width: '300px' }}>
                     <Select
