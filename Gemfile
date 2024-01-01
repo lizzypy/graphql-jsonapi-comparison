@@ -16,7 +16,8 @@ gem "pg"
 gem "graphiql-rails", group: :development
 
 # The only strictly-required gem
-gem 'graphiti'
+gem 'graphiti', '~> 1.2'
+gem 'graphiti-rails', '~> 0.1'
 
 # For automatic ActiveRecord pagination
 gem 'kaminari'
@@ -57,6 +58,6 @@ end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "spring"
 end
 

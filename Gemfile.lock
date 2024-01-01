@@ -130,6 +130,10 @@ GEM
       graphiti_errors (~> 1.1.0)
       jsonapi-renderer (~> 0.2, >= 0.2.2)
       jsonapi-serializable (~> 0.3.0)
+    graphiti-rails (0.4.0)
+      graphiti (~> 1.2)
+      railties (>= 5.0)
+      rescue_registry (~> 1.0)
     graphiti_errors (1.1.2)
       jsonapi-serializable (~> 0.1)
     graphiti_spec_helpers (1.1.0)
@@ -237,6 +241,8 @@ GEM
       psych (>= 4.0.0)
     reline (0.4.0)
       io-console (~> 0.5)
+    rescue_registry (1.0.0)
+      activesupport (>= 5.0)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -259,6 +265,7 @@ GEM
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
     ruby2_keywords (0.0.5)
+    spring (4.1.1)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -292,7 +299,8 @@ DEPENDENCIES
   factory_bot_rails
   faker
   graphiql-rails
-  graphiti
+  graphiti (~> 1.2)
+  graphiti-rails (~> 0.1)
   graphiti_spec_helpers
   graphql
   kaminari
@@ -301,6 +309,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.1.2)
   rspec-rails
+  spring
   sqlite3 (~> 1.4)
   tzinfo-data
 
