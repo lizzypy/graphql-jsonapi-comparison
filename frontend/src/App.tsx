@@ -17,15 +17,14 @@ function App() {
     const selectStyle = {
         border: '2px solid #FFFFFF', // White border
         color: '#FFFFFF', // White text color
-        height: '50px',
-        paddingTop: '10px',
+        height: '32px',
     };
     const [specificationSelection, setSpecificationSelection] = useState('graphql')
     return (
         <ThemeProvider theme={theme}>
             <div style={{display: "flex", flexDirection: "row", paddingTop: "100px", paddingLeft: "200px", justifyContent: "left"}}>
-                <div style={{ fontFamily: "Montserrat", fontSize: "32px", fontWeight: "bold", paddingRight: "10px" }}>Selected Specification:</div>
-                <FormControl style={{ width: '300px' }}>
+                <div style={{ fontFamily: "Montserrat", fontSize: "40px", paddingRight: "10px" }}>Selected Specification:</div>
+                <FormControl style={{ width: '300px', paddingTop: "10px" }}>
                     <Select
                         style={selectStyle}
                         labelId="select-label"

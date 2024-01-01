@@ -53,8 +53,7 @@ const StudentsRequest = () => {
             <Box>
                 <p style={{
                     fontFamily: "Montserrat",
-                    fontSize: "32px",
-                    fontWeight: "bold",
+                    fontSize: "28px",
                     color: "#FFFFFF"
                 }}>Students Request</p>
                 <ActionButton onClick={onClick} title={'Request'}/>
@@ -63,8 +62,7 @@ const StudentsRequest = () => {
             <Box>
                 <p style={{
                     fontFamily: "Montserrat",
-                    fontSize: "32px",
-                    fontWeight: "bold",
+                    fontSize: "28px",
                     color: "#FFFFFF"
                 }}>Students
                     Response</p>
