@@ -8,6 +8,16 @@ module Types
 
     field :students, [Student], 'Returns all students'
 
+    field :students_classes, [StudentsClass], 'Returns all classes'
+
+    def students_classes
+      ::StudentsClass.all
+    end
+
+    def students_class(id:)
+      ::StudentsClass.find(id)
+    end
+
     def students
       ::Student.all
     end

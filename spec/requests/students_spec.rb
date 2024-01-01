@@ -17,8 +17,7 @@ describe 'Students', type: :request do
     before do
       create_list(:student, 3)
     end
-    it "loads posts by ID" do
-
+    it "load all students" do
       result = subject
       students = result.values[0].deep_symbolize_keys[:students]
       expect(students.length).to eq(3)
