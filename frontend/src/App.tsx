@@ -17,7 +17,7 @@ function App() {
     const selectStyle = {
         border: '2px solid #FFFFFF', // White border
         color: '#FFFFFF', // White text color
-        height: '32px',
+        height: '35px',
     };
     const [specificationSelection, setSpecificationSelection] = useState('graphql')
     return (

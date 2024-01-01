@@ -13,6 +13,17 @@ const useStyles = makeStyles((theme) => ({
         width: `calc(100% - 400px)`, // Take up 100% width minus 200px for the margins
         margin: `0 200px`,
     },
+    sectionHeader: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'baseline'
+    },
+    codeSectionLabel: {
+        fontFamily: "Montserrat",
+        fontSize: "28px",
+        color: "white"
+    },
 }));
 
 const StudentsRequest = () => {
@@ -51,27 +62,27 @@ const StudentsRequest = () => {
     return (
         <div className={classes.flexContainer}>
             <Box>
-                <p style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "28px",
-                    color: "#FFFFFF"
-                }}>Students Request</p>
-                <ActionButton onClick={onClick} title={'Request'}/>
-                <MyCodeBlock code={studentsRequest} language={'graphql'} showLineNumbers={true}/>
+                <Box className={classes.sectionHeader}>
+                    <p className={classes.codeSectionLabel}>Students Request</p>
+                    <ActionButton onClick={onClick} title={'Request'}/>
+                </Box>
+                <Box>
+                    <MyCodeBlock code={studentsRequest} language={'graphql'} showLineNumbers={true}/>
+                </Box>
             </Box>
             <Box>
-                <p style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "28px",
-                    color: "#FFFFFF"
-                }}>Students
-                    Response</p>
-                <ActionButton onClick={() => {
-                    setRecords({data: {}});
-                    return
-                }} title={'Clear'}/>
-                <MyCodeBlock code={JSON.stringify(records.data, null, 2)} language={'json'}
-                             showLineNumbers={true}/>
+                <Box className={classes.sectionHeader}>
+                    <p className={classes.codeSectionLabel}>Students
+                        Response</p>
+                    <ActionButton onClick={() => {
+                        setRecords({data: {}});
+                        return
+                    }} title={'Clear'}/>
+                </Box>
+                <Box>
+                    <MyCodeBlock code={JSON.stringify(records.data, null, 2)} language={'json'}
+                                 showLineNumbers={true}/>
+                </Box>
             </Box>
         </div>
     );

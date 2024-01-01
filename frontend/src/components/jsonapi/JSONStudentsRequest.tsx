@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
         width: `calc(100% - 400px)`, // Take up 100% width minus 200px for the margins
         margin: `0 200px`,
     },
+    codeSectionLabel: {
+        fontFamily: "Montserrat",
+        fontSize: "28px",
+        color: "white"
+    }
 }));
 
 
@@ -21,8 +26,7 @@ const JSONStudentsRequest = () => {
     const classes = useStyles();
     const [getRecords, setGetRecords] = useState(false);
     const [records, setRecords] = useState({data: {}});
-
-    const studentsRequest = 'api/v1/students'
+    const [studentsRequest, setStudentsRequest] = useState('api/v1/students')
 
     useEffect(() => {
         axios
@@ -38,23 +42,10 @@ const JSONStudentsRequest = () => {
         return
     }
 
-    // const {refetch} = useQuery({
-    //     queryKey: ['students'],
-    //     queryFn: () =>
-    //         axios
-    //             .get(`http://localhost:3000/${studentsRequest}`)
-    //             .then((res) => setRecords({data: {...res.data}})),
-    // })
-
-
     return (
         <div className={classes.flexContainer}>
             <Box>
-                <p style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "28px",
-                    color: "#FFFFFF"
-                }}>Students Request</p>
+                <p className={classes.codeSectionLabel}>Students Request</p>
                 <ActionButton onClick={onClick} title={'Request'}/>
                 <TextField
                     style={{minWidth: "500px"}}
@@ -65,14 +56,11 @@ const JSONStudentsRequest = () => {
                         },
                     }}
                     value={studentsRequest}
+                    onChange={(event)=>setStudentsRequest(event.target.value)}
                 />
             </Box>
             <Box>
-                <p style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "28px",
-                    color: "#FFFFFF"
-                }}>Students
+                <p className={classes.codeSectionLabel}>Students
                     Response</p>
                 <ActionButton onClick={() => {
                     setRecords({data: {}})
