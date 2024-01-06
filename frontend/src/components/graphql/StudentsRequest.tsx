@@ -1,9 +1,11 @@
 import {gql, useApolloClient} from "@apollo/client";
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {Box} from "@mui/material";
 import ActionButton from "../ActionButton";
 import MyCodeBlock from "../MyCodeBlock";
 import {makeStyles} from "@mui/styles";
+import RequestModificationSelection from "../shared/RequestModificationSelection";
+import {RequestContext} from "../../App";
 
 const useStyles = makeStyles((theme) => ({
     flexContainer: {
@@ -31,6 +33,7 @@ const StudentsRequest = () => {
     const [getRecords, setGetRecords] = useState(false);
     const [records, setRecords] = useState({data: {}});
     const client = useApolloClient();
+    const { currentRequest } = useContext(RequestContext)
 
     const studentsRequest = `query GetStudents {
             students {
@@ -42,17 +45,45 @@ const StudentsRequest = () => {
           }
         `;
 
-    const GET_STUDENTS = gql`${studentsRequest}`;
+    const singleStudentsRequest = `query GetStudents {
+            student(id: 2) {
+                id
+                firstName
+                lastName
+                birthdate 
+            }
+          }
+        `;
+
+    const studentsWithClassRequest = `query GetStudents {
+            students {
+                id
+                firstName
+                lastName
+                birthdate
+                studentsClass {
+                    teacherFirst
+                    teacherLast
+                    room
+                } 
+            }
+          }
+        `;
+
+    const requestMappings: Record<string, string> = {
+        getStudents: studentsRequest,
+        getOneStudent: singleStudentsRequest,
+        getStudentsWithClasses: studentsWithClassRequest,
+    }
 
     useEffect(() => {
         const fetch = async () => {
-            const response = await client.query({query: GET_STUDENTS})
+            const response = await client.query({query: gql`${requestMappings[currentRequest]}`})
             setRecords(response);
             setGetRecords(false)
         }
         fetch();
     }, [getRecords]);
-    // const { loading, error, data } = useQuery(GET_STUDENTS);
 
     const onClick = async () => {
         setGetRecords(true);
@@ -66,9 +97,8 @@ const StudentsRequest = () => {
                     <p className={classes.codeSectionLabel}>Students Request</p>
                     <ActionButton onClick={onClick} title={'Request'}/>
                 </Box>
-                <Box>
-                    <MyCodeBlock code={studentsRequest} language={'graphql'} showLineNumbers={true}/>
-                </Box>
+                <RequestModificationSelection/>
+                <MyCodeBlock code={requestMappings[currentRequest]} language={'graphql'} showLineNumbers={true}/>
             </Box>
             <Box>
                 <Box className={classes.sectionHeader}>
@@ -79,10 +109,9 @@ const StudentsRequest = () => {
                         return
                     }} title={'Clear'}/>
                 </Box>
-                <Box>
+                    <div style={{height: '50px'}}></div>
                     <MyCodeBlock code={JSON.stringify(records.data, null, 2)} language={'json'}
                                  showLineNumbers={true}/>
-                </Box>
             </Box>
         </div>
     );
