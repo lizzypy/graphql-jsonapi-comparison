@@ -1,7 +1,6 @@
 # data and builds
 data
 tmp
-public
 log
 
 # don't commit js libraries

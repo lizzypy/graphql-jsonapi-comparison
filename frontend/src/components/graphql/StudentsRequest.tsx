@@ -1,9 +1,11 @@
 import {gql, useApolloClient} from "@apollo/client";
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {Box} from "@mui/material";
 import ActionButton from "../ActionButton";
 import MyCodeBlock from "../MyCodeBlock";
 import {makeStyles} from "@mui/styles";
+import RequestModificationSelection from "../shared/RequestModificationSelection";
+import {RequestContext} from "../../App";
 
 const useStyles = makeStyles((theme) => ({
     flexContainer: {
@@ -13,6 +15,17 @@ const useStyles = makeStyles((theme) => ({
         width: `calc(100% - 400px)`, // Take up 100% width minus 200px for the margins
         margin: `0 200px`,
     },
+    sectionHeader: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'baseline'
+    },
+    codeSectionLabel: {
+        fontFamily: "Montserrat",
+        fontSize: "28px",
+        color: "white"
+    },
 }));
 
 const StudentsRequest = () => {
@@ -20,6 +33,7 @@ const StudentsRequest = () => {
     const [getRecords, setGetRecords] = useState(false);
     const [records, setRecords] = useState({data: {}});
     const client = useApolloClient();
+    const { currentRequest } = useContext(RequestContext)
 
     const studentsRequest = `query GetStudents {
             students {
@@ -31,17 +45,45 @@ const StudentsRequest = () => {
           }
         `;
 
-    const GET_STUDENTS = gql`${studentsRequest}`;
+    const singleStudentsRequest = `query GetStudents {
+            student(id: 2) {
+                id
+                firstName
+                lastName
+                birthdate 
+            }
+          }
+        `;
+
+    const studentsWithClassRequest = `query GetStudents {
+            students {
+                id
+                firstName
+                lastName
+                birthdate
+                studentsClass {
+                    teacherFirst
+                    teacherLast
+                    room
+                } 
+            }
+          }
+        `;
+
+    const requestMappings: Record<string, string> = {
+        getStudents: studentsRequest,
+        getOneStudent: singleStudentsRequest,
+        getStudentsWithClasses: studentsWithClassRequest,
+    }
 
     useEffect(() => {
         const fetch = async () => {
-            const response = await client.query({query: GET_STUDENTS})
+            const response = await client.query({query: gql`${requestMappings[currentRequest]}`})
             setRecords(response);
             setGetRecords(false)
         }
         fetch();
     }, [getRecords]);
-    // const { loading, error, data } = useQuery(GET_STUDENTS);
 
     const onClick = async () => {
         setGetRecords(true);
@@ -51,29 +93,25 @@ const StudentsRequest = () => {
     return (
         <div className={classes.flexContainer}>
             <Box>
-                <p style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    color: "#FFFFFF"
-                }}>Students Request</p>
-                <ActionButton onClick={onClick} title={'Request'}/>
-                <MyCodeBlock code={studentsRequest} language={'graphql'} showLineNumbers={true}/>
+                <Box className={classes.sectionHeader}>
+                    <p className={classes.codeSectionLabel}>Students Request</p>
+                    <ActionButton onClick={onClick} title={'Request'}/>
+                </Box>
+                <RequestModificationSelection/>
+                <MyCodeBlock code={requestMappings[currentRequest]} language={'graphql'} showLineNumbers={true}/>
             </Box>
             <Box>
-                <p style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    color: "#FFFFFF"
-                }}>Students
-                    Response</p>
-                <ActionButton onClick={() => {
-                    setRecords({data: {}});
-                    return
-                }} title={'Clear'}/>
-                <MyCodeBlock code={JSON.stringify(records.data, null, 2)} language={'json'}
-                             showLineNumbers={true}/>
+                <Box className={classes.sectionHeader}>
+                    <p className={classes.codeSectionLabel}>Students
+                        Response</p>
+                    <ActionButton onClick={() => {
+                        setRecords({data: {}});
+                        return
+                    }} title={'Clear'}/>
+                </Box>
+                    <div style={{height: '50px'}}></div>
+                    <MyCodeBlock code={JSON.stringify(records.data, null, 2)} language={'json'}
+                                 showLineNumbers={true}/>
             </Box>
         </div>
     );
