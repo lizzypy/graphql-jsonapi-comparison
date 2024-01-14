@@ -3,6 +3,7 @@ import StudentsRequest from "./components/graphql/StudentsRequest";
 import {FormControl, MenuItem, Select} from "@mui/material";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import JSONStudentsRequest from "./components/jsonapi/JSONStudentsRequest";
+import Menu from "./components/shared/Menu";
 
 
 const theme = createTheme({
@@ -40,6 +41,11 @@ function App() {
         height: '35px',
     };
     const [specificationSelection, setSpecificationSelection] = useState('graphql')
+    const [open, setOpen] = useState(false)
+
+    const toggleDrawer = (input: boolean) => {
+        setOpen(input)
+    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -51,6 +57,7 @@ function App() {
                     paddingLeft: "200px",
                     justifyContent: "left"
                 }}>
+                    {/*<Menu open={open} toggleDrawer={toggleDrawer}/>*/}
                     <div style={{fontFamily: "Montserrat", fontSize: "40px", paddingRight: "10px"}}>Selected
                         Specification:
                     </div>
