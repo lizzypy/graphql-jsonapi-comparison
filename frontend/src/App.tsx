@@ -3,8 +3,6 @@ import StudentsRequest from "./components/graphql/StudentsRequest";
 import {FormControl, MenuItem, Select} from "@mui/material";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import JSONStudentsRequest from "./components/jsonapi/JSONStudentsRequest";
-import Menu from "./components/shared/Menu";
-
 
 const theme = createTheme({
     palette: {
