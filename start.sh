@@ -6,7 +6,7 @@ set -euo pipefail
 TMPDIR="/usr/src/app/tmp/"
 if [ -d "$TMPDIR" ]; then rm -rf "$TMPDIR"; fi
 
-rm -f /myapp/tmp/pids/server.pid
+rm -f /usr/src/app/tmp/pids/server.pid
 
 rake db:create db:migrate db:seed
 
