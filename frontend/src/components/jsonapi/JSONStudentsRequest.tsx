@@ -45,7 +45,7 @@ const JSONStudentsRequest = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/${requestMappings[currentRequest]}`)
+            .get(`/${requestMappings[currentRequest]}`)
             .then((res) => {
                 setRecords({data: {...res.data}})
                 setGetRecords(false)
