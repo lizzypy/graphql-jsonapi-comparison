@@ -2,6 +2,7 @@
 data
 tmp
 log
+public
 
 # don't commit js libraries
 **/node_modules

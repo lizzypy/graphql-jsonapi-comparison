@@ -13,17 +13,6 @@ services:
       - .env.local
     ports:
       - "3000:3000"
-
-  frontend:
-    build:
-      context: .
-      target: frontend-builder
-    volumes:
-      - ./frontend:/usr/src/app
-      - node_modules:/usr/src/app/node_modules
-    ports:
-      - "3001:3000"
-
   postgres:
     image: postgres:14
     volumes:
